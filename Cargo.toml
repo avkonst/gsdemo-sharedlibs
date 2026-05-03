@@ -1,0 +1,12 @@
+[workspace]
+resolver = "2"
+members = [
+    "libs/appbase",
+    "libs/logging",
+]
+
+[workspace.dependencies]
+logging = { path = "libs/logging" }
+
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
