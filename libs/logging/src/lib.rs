@@ -7,7 +7,7 @@ pub fn register_default_metrics() {
 
 /// Record an API call for the given endpoint.
 pub fn record_api_call(endpoint: &str) {
-    counter!("api_calls_total", "endpoint" => endpoint.to_owned());
+    counter!("api_calls_total", 1, "endpoint" => endpoint.to_owned());
 }
 
 /// Install the Prometheus exporter on the given port.
